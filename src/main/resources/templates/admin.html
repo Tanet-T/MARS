@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Applications</title>
+    <link rel="stylesheet" href="/css/admin-styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Applications</h2>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('pending')">Pending</button>
+        <button class="tab-button" onclick="openTab('processed')">Approved / Rejected</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="pending" class="tab-content"  style="display: block;">
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="app : ${pendingApplications}">
+                <td th:text="${app.name}">Name</td>
+                <td th:text="${app.address}">Address</td>
+                <td th:text="${app.phoneNumber}">Phone Number</td>
+                <td th:text="${app.status}">Status</td>
+                <td>
+                    <form th:action="@{/admin/approve/{id}(id=${app.id})}" method="post" style="display:inline;">
+                        <button type="submit">Approve</button>
+                    </form>
+                    <form th:action="@{/admin/reject/{id}(id=${app.id})}" method="post" style="display:inline;">
+                        <button type="submit" class="reject-button">Reject</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="processed" class="tab-content" style="display:none;">
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="app : ${processedApplications}">
+                <td th:text="${app.name}">Name</td>
+                <td th:text="${app.address}">Address</td>
+                <td th:text="${app.phoneNumber}">Phone Number</td>
+                <td th:text="${app.status}">Status</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function openTab(tabName) {
+        var i, tabContent, tabButton;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        tabButton = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tabButton.length; i++) {
+            tabButton[i].className = tabButton[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>

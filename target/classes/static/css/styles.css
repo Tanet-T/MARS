@@ -1,0 +1,128 @@
+/* Reset Browser Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="file"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+/* styles.css */
+
+/* เพิ่มสไตล์สำหรับข้อความแสดงความสำเร็จ */
+.alert-success {
+    background-color: #d4edda; /* สีพื้นหลังเขียวอ่อน */
+    color: #155724; /* สีตัวอักษรเขียวเข้ม */
+    border: 1px solid #c3e6cb; /* เส้นขอบเขียว */
+    padding: 10px; /* ระยะห่างภายในกล่องข้อความ */
+    margin: 10px 0; /* ระยะห่างด้านบนและด้านล่างของกล่องข้อความ */
+    border-radius: 5px; /* ขอบมน */
+    font-weight: bold; /* ตัวหนา */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* จัดกล่องฟอร์มให้อยู่ตรงกลาง */
+.container {
+    width: 60%; /* กำหนดความกว้างของฟอร์ม */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    padding: 20px; /* ระยะห่างภายในกล่อง */
+    border: 1px solid #ccc; /* เส้นขอบ */
+    border-radius: 10px; /* ขอบมน */
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+}
+
+/* จัดปุ่มให้อยู่ตรงกลาง */
+button[type="submit"] {
+    display: block; /* ทำให้เป็นบล็อก */
+    width: 100px; /* กำหนดความกว้างปุ่ม */
+    margin: 20px auto; /* จัดให้อยู่ตรงกลางพร้อมระยะห่างด้านบนและล่าง */
+    padding: 10px; /* ระยะห่างภายในปุ่ม */
+    background-color: #007bff; /* สีพื้นหลังปุ่ม */
+    color: white; /* สีตัวอักษรปุ่ม */
+    border: none; /* ลบเส้นขอบปุ่ม */
+    border-radius: 5px; /* ขอบมน */
+    cursor: pointer; /* แสดงเคอร์เซอร์เมื่อ hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* เปลี่ยนสีเมื่อ hover */
+}

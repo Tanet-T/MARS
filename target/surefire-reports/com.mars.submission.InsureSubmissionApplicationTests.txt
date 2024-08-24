@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mars.submission.InsureSubmissionApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.625 s -- in com.mars.submission.InsureSubmissionApplicationTests

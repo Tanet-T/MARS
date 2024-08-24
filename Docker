@@ -1,0 +1,14 @@
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:17-jdk-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the current directory contents into the container
+COPY . .
+
+# Package the application
+RUN ./mvnw package -DskipTests
+
+# Run the application
+CMD ["java", "-jar", "target/app-submission.jar"]
